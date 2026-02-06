@@ -35,7 +35,7 @@ Example:
 
 1. Load any tab-separated dataset (`.tab/.tsv/.txt/.gz`)
 2. Preview the dataset before plotting
-3. Select Row IDs using checkboxes (no Ctrl/Shift)
+3. Select Row IDs using checkboxes
 4. Create custom groups and assign sample columns to each group
 5. Plot **Box + Jitter**
    - Groups on X-axis
@@ -49,36 +49,11 @@ Example:
 
 ## Installation
 
-### 1) Create a virtual environment
-
-Windows (PowerShell):
-
-    python -m venv .venv
-    .\.venv\Scripts\Activate.ps1
-
-Windows (CMD):
-
-    python -m venv .venv
-    .\.venv\Scripts\activate
-
-macOS / Linux:
-
-    python -m venv .venv
-    source .venv/bin/activate
-
----
-
-### 2) Install dependencies
-
-Create a file called `requirements.txt` with:
-
-    pandas
-    numpy
-    matplotlib
-
-Install them:
-
-    pip install -r requirements.txt
+### Install dependencies
+  
+    pip install  pandas
+    pip install  numpy
+    pip install  matplotlib
 
 Note:
 - `tkinter` is included with most Python installations.
@@ -102,14 +77,15 @@ Dataset name:
 
     GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz
 
-### Step 1 — Download the dataset (manual)
+### Step 1 — Download the dataset 
 
-1) Go to the GEO page for **GSE112627**  
-2) In **Series supplementary files**, download:
+1) Go to the GEO page for **GSE112627**
+2) https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE112627  
+3) In **Series supplementary files**, download:
 
     GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz
 
-3) Put it next to `Visualiser_GUI.py` (recommended), for example:
+4) Put it next to `Visualiser_GUI.py` (recommended), for example:
 
     interactive-table-visualiser/
     ├─ Visualiser_GUI.py
@@ -118,25 +94,6 @@ Dataset name:
 
 ---
 
-### Step 1 (alternative) — Download via command line
-
-Windows (PowerShell):
-
-    mkdir scn1a_demo
-    cd scn1a_demo
-    curl -L -o GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz `
-    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112627/suppl/GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz"
-
-macOS / Linux:
-
-    mkdir -p scn1a_demo
-    cd scn1a_demo
-    curl -L -o GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz \
-    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE112nnn/GSE112627/suppl/GSE112627_Normalized_counts_file_on_ALL_groups.tab.gz"
-
-If FTP is blocked on your network, download manually from the GEO website.
-
----
 
 ### Step 2 — Open in the GUI
 
